@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181101 12:34:40.483" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/sujathasrideve/Robot_Amazon/Tests/Application_Login.robot" id="s1" name="Application Login">
+<test id="s1-t1" name="Login To Application with Valid Credentials">
+<kw type="setup" name="Open Browser and Maximize" library="ResourceFile">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:40.747" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" endtime="20181101 12:34:46.842" starttime="20181101 12:34:40.747"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:46.842" starttime="20181101 12:34:40.747"></status>
+</kw>
+<kw name="Login With Valid Credentials" library="ResourceFile">
+<arguments>
+<arg>${REGISTERED_USER}</arg>
+</arguments>
+<kw name="Click SignIn" library="ResourceFile">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Sign-In}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:46.846" level="INFO">Clicking element 'xpath://a[@id='nav-link-yourAccount']'.</msg>
+<status status="PASS" endtime="20181101 12:34:47.728" starttime="20181101 12:34:46.845"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:47.729" starttime="20181101 12:34:46.844"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_loc}</arg>
+<arg>${REGISTERED_USER.Email}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:47.729" level="INFO">Typing text 'Testing.automation769@gmail.com' into text field 'id=ap_email'.</msg>
+<status status="PASS" endtime="20181101 12:34:47.994" starttime="20181101 12:34:47.729"></status>
+</kw>
+<kw name="Click Cont" library="ResourceFile">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Cont}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:47.995" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" endtime="20181101 12:34:48.782" starttime="20181101 12:34:47.994"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:48.782" starttime="20181101 12:34:47.994"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_loc}</arg>
+<arg>${REGISTERED_USER.Password}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:48.784" level="INFO">Typing text 'Automation212#' into text field 'id=ap_password'.</msg>
+<status status="PASS" endtime="20181101 12:34:48.898" starttime="20181101 12:34:48.783"></status>
+</kw>
+<kw name="Click Submit" library="ResourceFile">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:48.899" level="INFO">Clicking button 'id=signInSubmit'.</msg>
+<status status="PASS" endtime="20181101 12:34:51.312" starttime="20181101 12:34:48.899"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:51.312" starttime="20181101 12:34:48.898"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:51.312" starttime="20181101 12:34:46.843"></status>
+</kw>
+<kw name="Get Title Of The Home Page" library="ResourceFile">
+<assign>
+<var>${Result}</var>
+</assign>
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of current page.</doc>
+<assign>
+<var>${Title}</var>
+</assign>
+<msg timestamp="20181101 12:34:51.338" level="INFO">${Title} = Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</msg>
+<status status="PASS" endtime="20181101 12:34:51.338" starttime="20181101 12:34:51.314"></status>
+</kw>
+<msg timestamp="20181101 12:34:51.338" level="INFO">${Result} = Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</msg>
+<status status="PASS" endtime="20181101 12:34:51.338" starttime="20181101 12:34:51.313"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${Result}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:51.339" level="INFO">Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</msg>
+<status status="PASS" endtime="20181101 12:34:51.339" starttime="20181101 12:34:51.338"></status>
+</kw>
+<kw name="Logoff Application" library="ResourceFile">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${Hover_ID}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:51.340" level="INFO">Simulating Mouse Over on element 'xpath://span[@class='nav-icon nav-arrow']'.</msg>
+<status status="PASS" endtime="20181101 12:34:51.402" starttime="20181101 12:34:51.339"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Signout}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20181101 12:34:51.457" starttime="20181101 12:34:51.403"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Signout}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:51.458" level="INFO">Clicking element 'id=nav-item-signout'.</msg>
+<status status="PASS" endtime="20181101 12:34:51.999" starttime="20181101 12:34:51.458"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:52.000" starttime="20181101 12:34:51.339"></status>
+</kw>
+<kw type="teardown" name="Close Application Browser" library="ResourceFile">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181101 12:34:52.104" starttime="20181101 12:34:52.000"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:52.105" starttime="20181101 12:34:52.000"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:52.105" critical="yes" starttime="20181101 12:34:40.746"></status>
+</test>
+<test id="s1-t2" name="Login With Unregistered User">
+<kw type="setup" name="Open Browser and Maximize" library="ResourceFile">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:52.108" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" endtime="20181101 12:34:57.554" starttime="20181101 12:34:52.107"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:57.554" starttime="20181101 12:34:52.107"></status>
+</kw>
+<kw name="Login With Unregistered User Credentials" library="ResourceFile">
+<arguments>
+<arg>${UNREGISTERED_USER}</arg>
+</arguments>
+<kw name="Click SignIn" library="ResourceFile">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Sign-In}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:57.557" level="INFO">Clicking element 'xpath://a[@id='nav-link-yourAccount']'.</msg>
+<status status="PASS" endtime="20181101 12:34:58.402" starttime="20181101 12:34:57.556"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:58.402" starttime="20181101 12:34:57.556"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_loc}</arg>
+<arg>${UNREGISTERED_USER.Email}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:58.403" level="INFO">Typing text 'kalyan.sujatha5555@gmail.com' into text field 'id=ap_email'.</msg>
+<status status="PASS" endtime="20181101 12:34:58.630" starttime="20181101 12:34:58.402"></status>
+</kw>
+<kw name="Click Cont" library="ResourceFile">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Cont}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:58.631" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" endtime="20181101 12:34:59.053" starttime="20181101 12:34:58.631"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:59.053" starttime="20181101 12:34:58.630"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${UNREGISTERED_USER.ExpectedErrorMessage}</arg>
+</arguments>
+<status status="PASS" endtime="20181101 12:34:59.068" starttime="20181101 12:34:59.054"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:59.068" starttime="20181101 12:34:57.555"></status>
+</kw>
+<kw type="teardown" name="Close Application Browser" library="ResourceFile">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181101 12:34:59.170" starttime="20181101 12:34:59.069"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:59.170" starttime="20181101 12:34:59.068"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:34:59.170" critical="yes" starttime="20181101 12:34:52.106"></status>
+</test>
+<test id="s1-t3" name="Login With Invalid Credentials">
+<kw type="setup" name="Open Browser and Maximize" library="ResourceFile">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181101 12:34:59.172" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" endtime="20181101 12:35:04.015" starttime="20181101 12:34:59.172"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:04.016" starttime="20181101 12:34:59.172"></status>
+</kw>
+<kw name="Login With Invalid Credentials" library="ResourceFile">
+<arguments>
+<arg>${INVALID_USERS_PASSWORD}</arg>
+</arguments>
+<kw name="Click SignIn" library="ResourceFile">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Sign-In}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:04.018" level="INFO">Clicking element 'xpath://a[@id='nav-link-yourAccount']'.</msg>
+<status status="PASS" endtime="20181101 12:35:04.633" starttime="20181101 12:35:04.018"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:04.633" starttime="20181101 12:35:04.017"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_loc}</arg>
+<arg>${INVALID_USERS_PASSWORD.Email}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:04.634" level="INFO">Typing text 'Testing.automation769@gmail.com' into text field 'id=ap_email'.</msg>
+<status status="PASS" endtime="20181101 12:35:04.868" starttime="20181101 12:35:04.633"></status>
+</kw>
+<kw name="Click Cont" library="ResourceFile">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Cont}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:04.868" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" endtime="20181101 12:35:05.767" starttime="20181101 12:35:04.868"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:05.767" starttime="20181101 12:35:04.868"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_loc}</arg>
+<arg>${INVALID_USERS_PASSWORD.Password}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:05.768" level="INFO">Typing text 'Automation212' into text field 'id=ap_password'.</msg>
+<status status="PASS" endtime="20181101 12:35:05.875" starttime="20181101 12:35:05.767"></status>
+</kw>
+<kw name="Click Submit" library="ResourceFile">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:05.876" level="INFO">Clicking button 'id=signInSubmit'.</msg>
+<status status="PASS" endtime="20181101 12:35:06.957" starttime="20181101 12:35:05.876"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:06.957" starttime="20181101 12:35:05.875"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${INVALID_USERS_PASSWORD.ExpectedErrorMessage}</arg>
+</arguments>
+<status status="PASS" endtime="20181101 12:35:06.971" starttime="20181101 12:35:06.957"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:06.971" starttime="20181101 12:35:04.016"></status>
+</kw>
+<kw type="teardown" name="Close Application Browser" library="ResourceFile">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181101 12:35:07.068" starttime="20181101 12:35:06.972"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:07.068" starttime="20181101 12:35:06.971"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:07.068" critical="yes" starttime="20181101 12:34:59.171"></status>
+</test>
+<test id="s1-t4" name="Login With Empty Username and Password">
+<kw type="setup" name="Open Browser and Maximize" library="ResourceFile">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:07.073" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" endtime="20181101 12:35:12.767" starttime="20181101 12:35:07.072"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:12.768" starttime="20181101 12:35:07.072"></status>
+</kw>
+<kw name="Login With Empty Username and Password" library="ResourceFile">
+<arguments>
+<arg>${BLANK_CREDENTIALS}</arg>
+</arguments>
+<kw name="Click SignIn" library="ResourceFile">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Sign-In}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:12.769" level="INFO">Clicking element 'xpath://a[@id='nav-link-yourAccount']'.</msg>
+<status status="PASS" endtime="20181101 12:35:13.476" starttime="20181101 12:35:12.769"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:13.476" starttime="20181101 12:35:12.769"></status>
+</kw>
+<kw name="Click Cont" library="ResourceFile">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Cont}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:13.478" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" endtime="20181101 12:35:13.699" starttime="20181101 12:35:13.477"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:13.699" starttime="20181101 12:35:13.477"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${BLANK_CREDENTIALS.ExpectedErrorMessage1}</arg>
+</arguments>
+<status status="PASS" endtime="20181101 12:35:13.712" starttime="20181101 12:35:13.699"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_loc}</arg>
+<arg>${Email_id}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:13.712" level="INFO">Typing text 'Testing.automation769@gmail.com' into text field 'id=ap_email'.</msg>
+<status status="PASS" endtime="20181101 12:35:13.920" starttime="20181101 12:35:13.712"></status>
+</kw>
+<kw name="Click Cont" library="ResourceFile">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Cont}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:13.921" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" endtime="20181101 12:35:14.634" starttime="20181101 12:35:13.921"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:14.634" starttime="20181101 12:35:13.920"></status>
+</kw>
+<kw name="Click Submit" library="ResourceFile">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<msg timestamp="20181101 12:35:14.635" level="INFO">Clicking button 'id=signInSubmit'.</msg>
+<status status="PASS" endtime="20181101 12:35:14.786" starttime="20181101 12:35:14.635"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:14.787" starttime="20181101 12:35:14.634"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${BLANK_CREDENTIALS.ExpectedErrorMessage2}</arg>
+</arguments>
+<status status="PASS" endtime="20181101 12:35:14.800" starttime="20181101 12:35:14.787"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:14.800" starttime="20181101 12:35:12.768"></status>
+</kw>
+<kw type="teardown" name="Close Application Browser" library="ResourceFile">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20181101 12:35:14.897" starttime="20181101 12:35:14.801"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:14.897" starttime="20181101 12:35:14.801"></status>
+</kw>
+<status status="PASS" endtime="20181101 12:35:14.897" critical="yes" starttime="20181101 12:35:07.070"></status>
+</test>
+<doc>results</doc>
+<status status="PASS" endtime="20181101 12:35:14.901" starttime="20181101 12:34:40.487"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Application Login" pass="4">Application Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

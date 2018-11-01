@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20181005 11:41:00.676" generator="Robot 3.0.4 (Python 2.7.15 on darwin)">
+<suite source="/Users/sujathasrideve/Robot_Amazon/Tests/SearchProduct.robot" id="s1" name="SearchProduct">
+<test id="s1-t1" name="[Setup]">
+<kw name="Open Browser and Maximize" library="ResourceFile">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20181005 11:41:00.915" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" endtime="20181005 11:42:04.222" starttime="20181005 11:41:00.914"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20181005 11:42:04.653" starttime="20181005 11:42:04.223"></status>
+</kw>
+<status status="PASS" endtime="20181005 11:42:04.654" starttime="20181005 11:41:00.914"></status>
+</kw>
+<status status="PASS" endtime="20181005 11:42:04.654" critical="yes" starttime="20181005 11:41:00.913"></status>
+</test>
+<test id="s1-t2" name="SearchProduct">
+<kw name="Login With Valid Credentials" library="ResourceFile">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Sign-In}</arg>
+</arguments>
+<msg timestamp="20181005 11:42:04.659" level="INFO">Clicking element 'xpath://a[@id='nav-link-yourAccount']'.</msg>
+<status status="PASS" endtime="20181005 11:42:14.663" starttime="20181005 11:42:04.658"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${email_loc}</arg>
+<arg>${Email_id}</arg>
+</arguments>
+<msg timestamp="20181005 11:42:14.664" level="INFO">Typing text 'Testing.automation769@gmail.com' into text field 'id=ap_email'.</msg>
+<status status="PASS" endtime="20181005 11:42:14.908" starttime="20181005 11:42:14.663"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Cont}</arg>
+</arguments>
+<msg timestamp="20181005 11:42:14.908" level="INFO">Clicking button 'id=continue'.</msg>
+<status status="PASS" endtime="20181005 11:42:16.420" starttime="20181005 11:42:14.908"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Password_loc}</arg>
+<arg>${Password}</arg>
+</arguments>
+<msg timestamp="20181005 11:42:16.421" level="INFO">Typing text 'Automation212#' into text field 'id=ap_password'.</msg>
+<status status="PASS" endtime="20181005 11:42:16.554" starttime="20181005 11:42:16.421"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Submit}</arg>
+</arguments>
+<msg timestamp="20181005 11:42:16.555" level="INFO">Clicking button 'id=signInSubmit'.</msg>
+<status status="PASS" endtime="20181005 11:42:22.874" starttime="20181005 11:42:16.554"></status>
+</kw>
+<status status="PASS" endtime="20181005 11:42:22.874" starttime="20181005 11:42:04.658"></status>
+</kw>
+<kw name="Enter Text in SearchBox" library="ResourceFile">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Text}</arg>
+<arg>${Search}</arg>
+</arguments>
+<msg timestamp="20181005 11:42:22.875" level="INFO">Typing text 'nokia 6.1 plus' into text field 'id:twotabsearchtextbox'.</msg>
+<status status="PASS" endtime="20181005 11:42:25.009" starttime="20181005 11:42:22.875"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${Search_Button}</arg>
+</arguments>
+<msg timestamp="20181005 11:42:25.009" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" endtime="20181005 11:42:33.825" starttime="20181005 11:42:25.009"></status>
+</kw>
+<status status="PASS" endtime="20181005 11:42:33.825" starttime="20181005 11:42:22.874"></status>
+</kw>
+<kw name="Sort Search by Avg Customer Review" library="ResourceFile">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${Select_category}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20181005 11:42:33.860" starttime="20181005 11:42:33.825"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${Select_category}</arg>
+</arguments>
+<msg timestamp="20181005 11:42:33.861" level="INFO">Clicking element 'xpath://span[@class='a-size-small a-color-base']'.</msg>
+<status status="PASS" endtime="20181005 11:42:33.993" starttime="20181005 11:42:33.861"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${filter_sort}</arg>
+<arg>timeout=10</arg>
+</arguments>
+<status status="PASS" endtime="20181005 11:42:36.111" starttime="20181005 11:42:33.993"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>${filter_sort}</arg>
+<arg>review-rank</arg>
+</arguments>
+<msg timestamp="20181005 11:42:36.112" level="INFO">Selecting options from selection list 'id=sort' by value review-rank.</msg>
+<status status="PASS" endtime="20181005 11:42:36.248" starttime="20181005 11:42:36.112"></status>
+</kw>
+<status status="PASS" endtime="20181005 11:42:36.248" starttime="20181005 11:42:33.825"></status>
+</kw>
+<kw name="Select the First Search Item" library="ResourceFile">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${Result}</arg>
+<arg>timeout=12</arg>
+</arguments>
+<status status="PASS" endtime="20181005 11:42:36.280" starttime="20181005 11:42:36.249"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath://div[@class='a-row a-spacing-small']//h2</arg>
+</arguments>
+<status status="PASS" endtime="20181005 11:42:36.297" starttime="20181005 11:42:36.280"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[contains(@title,'Nokia 6.1 (Blue-Gold, 4GB RAM, 64GB Storage)')]</arg>
+</arguments>
+<msg timestamp="20181005 11:42:36.298" level="INFO">Clicking link 'xpath://a[contains(@title,'Nokia 6.1 (Blue-Gold, 4GB RAM, 64GB Storage)')]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20181005 11:42:36.843" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20181005 11:42:36.843" starttime="20181005 11:42:36.341"></status>
+</kw>
+<msg timestamp="20181005 11:42:36.848" level="FAIL">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.13.6 x86_64)
+</msg>
+<status status="FAIL" endtime="20181005 11:42:36.848" starttime="20181005 11:42:36.298"></status>
+</kw>
+<status status="FAIL" endtime="20181005 11:42:36.848" starttime="20181005 11:42:36.248"></status>
+</kw>
+<tags>
+<tag>Search</tag>
+</tags>
+<status status="FAIL" endtime="20181005 11:42:36.848" critical="yes" starttime="20181005 11:42:04.656">ElementNotVisibleException: Message: element not visible
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.13.6 x86_64)
+</status>
+</test>
+<doc>This file contains all testcases along with Setup and Teardown functions defined at Testsuite level.</doc>
+<status status="FAIL" endtime="20181005 11:42:36.850" starttime="20181005 11:41:00.681"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="1">Critical Tests</stat>
+<stat fail="1" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Search</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="SearchProduct" pass="1">SearchProduct</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
